@@ -6,7 +6,7 @@
 /*   By: pgonzal2 <pgonzal2@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 13:12:12 by pgonzal2          #+#    #+#             */
-/*   Updated: 2024/05/15 18:27:16 by pgonzal2         ###   ########.fr       */
+/*   Updated: 2024/05/15 21:40:02 by pgonzal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include "../libft/includes/libft.h"
 # include <fcntl.h>
-#include <strings.h>
+# include <strings.h>
 
 /////////////////////////////MLX//////////////////////////////
 
@@ -37,21 +37,20 @@ typedef struct s_map
 	int		c;
 	int		p;
 	int		e;
-} t_map;
+}	t_map;
 
-typedef struct s_data {
-	mlx_t*			mlx;
-	mlx_image_t*	img_poke;
-	mlx_image_t*	img_pc;
-	mlx_image_t*	img_floor;
-	mlx_image_t*	img_exit;
-	mlx_image_t*	img_wall;
-	mlx_texture_t*	texture;
-	t_map*			map;
+typedef struct s_data
+{
+	mlx_t			*mlx;
+	mlx_image_t		*img_poke;
+	mlx_image_t		*img_pc;
+	mlx_image_t		*img_floor;
+	mlx_image_t		*img_exit;
+	mlx_image_t		*img_wall;
+	mlx_texture_t	*texture;
+	t_map			*map;
 	int				i;
-} t_data;
-
-
+}	t_data;
 
 /////////////////////////CHECK_MAP/////////////////////////////
 
@@ -67,7 +66,7 @@ void	ft_flood_fill(t_map *map, int x, int y);
 void	ft_check_collectibles(t_map *map);
 void	ft_init_my_mlx(t_map *map);
 void	ft_create_texture(t_data *data);
-void	ft_put_imgs(t_data *data,t_map *map);
+void	ft_put_imgs(t_data *data, t_map *map);
 void	ft_print_colectables(t_data *data);
 
 ///////////////////////MLX///////////////////////////
@@ -82,6 +81,6 @@ void	print_config(t_map *map, int print_map);
 void	ft_put_imgs(t_data *data, t_map *map);
 void	ft_create_texture(t_data *data);
 void	ft_print_colectables(t_data *data);
-void	ft_fun(mlx_key_data_t keydata, void* param);
+void	ft_fun(mlx_key_data_t keydata, void *param);
 
 #endif
